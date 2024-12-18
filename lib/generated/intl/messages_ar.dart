@@ -25,9 +25,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "Arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "Dark": MessageLookupByLibrary.simpleMessage("ليلى"),
         "English": MessageLookupByLibrary.simpleMessage("الانجليزية"),
+        "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "Language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "Light": MessageLookupByLibrary.simpleMessage("نهارى"),
+        "Logout": MessageLookupByLibrary.simpleMessage("خروج"),
+        "Lovs": MessageLookupByLibrary.simpleMessage("المفضلة"),
+        "Maps": MessageLookupByLibrary.simpleMessage("الموقع"),
+        "Profile": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "Theme": MessageLookupByLibrary.simpleMessage("النمط"),
-        "Title": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية")
+        "Title": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
+        "Welcomeback": MessageLookupByLibrary.simpleMessage("مرحبا بالعودة")
       };
 }

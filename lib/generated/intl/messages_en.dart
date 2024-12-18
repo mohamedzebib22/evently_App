@@ -25,9 +25,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "Arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "Dark": MessageLookupByLibrary.simpleMessage("Dark"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
+        "Home": MessageLookupByLibrary.simpleMessage("Home"),
         "Language": MessageLookupByLibrary.simpleMessage("language"),
         "Light": MessageLookupByLibrary.simpleMessage("Light"),
+        "Logout": MessageLookupByLibrary.simpleMessage("LogOut"),
+        "Lovs": MessageLookupByLibrary.simpleMessage("Lovs"),
+        "Maps": MessageLookupByLibrary.simpleMessage("Maps"),
+        "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "Theme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "Title": MessageLookupByLibrary.simpleMessage("HomePage")
+        "Title": MessageLookupByLibrary.simpleMessage("HomePage"),
+        "Welcomeback": MessageLookupByLibrary.simpleMessage("Welcome Back")
       };
 }

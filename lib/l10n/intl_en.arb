@@ -5,6 +5,12 @@
     "English" : "English",
     "Theme" : "Theme",
     "Light" : "Light",
-    "Dark" : "Dark"
+    "Dark" : "Dark",
+    "Logout" :"LogOut",
+    "Home" : "Home",
+    "Maps": "Maps",
+    "Lovs" :"Lovs",
+    "Profile" :"Profile",
+    "Welcomeback":"Welcome Back"
 
 }

@@ -26,7 +26,7 @@ class CustomChange extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                   Text(title, style :TextStyle(fontSize: 20 , color: Colors.blue)),
-                  Icon(Icons.check , color: Colors.blue,)
+                  Icon(Icons.arrow_drop_down , color: Colors.blue,)
                 ],),
               ),
             )
