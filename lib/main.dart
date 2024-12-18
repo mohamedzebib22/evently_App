@@ -1,14 +1,19 @@
 import 'package:evently_app/generated/l10n.dart';
+import 'package:evently_app/models/theme_data.dart';
 import 'package:evently_app/providers/app_language.dart';
+import 'package:evently_app/providers/app_theme.dart';
 import 'package:evently_app/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    create: (context) => AppLanguageProvider(),
-    child:const EventelyApp()));
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (context) => AppLanguageProvider()),
+      ChangeNotifierProvider(create: (context) => AppThemeProvider()),
+    ],
+    child: const EventelyApp()));
 }
 
 class EventelyApp extends StatelessWidget {
@@ -16,9 +21,14 @@ class EventelyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<AppLanguageProvider>(context);
+    var languageProvider = Provider.of<AppLanguageProvider>(context);
+    var themeProvider =Provider.of<AppThemeProvider>(context);
     return MaterialApp(
-      locale: Locale(provider.appLanguage),
+      theme: AppTheme.ligtTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: themeProvider.appTheme,
+
+      locale: Locale(languageProvider.appLanguage),
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,

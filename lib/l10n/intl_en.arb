@@ -2,5 +2,9 @@
     "Title" : "HomePage",
     "Language" : "language",
     "Arabic" : "Arabic",
-    "English" : "English"
+    "English" : "English",
+    "Theme" : "Theme",
+    "Light" : "Light",
+    "Dark" : "Dark"
+
 }
