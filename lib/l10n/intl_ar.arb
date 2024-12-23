@@ -15,6 +15,23 @@
     "home" : "الرئيسية",
     "maps" : "الموقع",
     "loves" : "المفضلة",
-    "profile" : "الصفحة الشخصية"
+    "profile" : "الصفحة الشخصية",
+    "ALl" :"الكل",
+    "Birthday" : "عيد ميلاد",
+    "Metting"  :"اجتماع",
+    "Gaming" :"العاب",
+    "WorkShop" : "ورشة عمل",
+    "BookClub" : "نادى",
+    "Exhibtion": "سياحة",
+    "Holiday":"اجازة",
+    "Eating":"الاكل",
+     "title" : "العنوان",
+     "Description" : "الوصف",
+     "EventDate" : "التاريخ",
+     "EventTime" : "الوقت",
+     "ChooseDate" : "التاريخ",
+    "ChooseTime" :"الوقت",
+    "AddEvent" : "انشاء حذث",
+    "ChooseEventLocation" : "اختار مكان الحدث"
 
 }

@@ -2,6 +2,7 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/models/theme_data.dart';
+import 'package:evently_app/screens/create_event.dart';
 import 'package:evently_app/screens/home.dart';
 import 'package:evently_app/screens/loves.dart';
 import 'package:evently_app/screens/maps.dart';
@@ -31,7 +32,9 @@ class _DefultPageState extends State<DefultPage> {
         shape: CircleBorder(side: BorderSide(width: 4, color: Colors.white)),
 
         // backgroundColor: ColorsApp.kPrimaryColor,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, CreateEvent.id);
+        },
         child: Icon(
           Icons.add,
           color: Colors.white,
@@ -46,7 +49,6 @@ class _DefultPageState extends State<DefultPage> {
           notchMargin: 8,
           padding: EdgeInsets.zero,
           child: BottomNavigationBar(
-            
             elevation: 0,
             currentIndex: selectIndex,
             onTap: (index) {
@@ -54,10 +56,32 @@ class _DefultPageState extends State<DefultPage> {
               setState(() {});
             },
             items: [
-              buildIconBottomBar(icon: selectIndex ==0 ?Icon(Icons.home_filled):Icon(Icons.home_outlined), index: 0, label: S.of(context).home,),
-              buildIconBottomBar(icon:selectIndex ==1 ?Icon(Icons.location_on_sharp): Icon(Icons.location_on_outlined), index: 1, label:S.of(context).maps,),
-              buildIconBottomBar(icon:selectIndex ==2 ?Icon(Icons.favorite_border_rounded): Icon(Icons.favorite_border_outlined), index: 2, label:S.of(context).loves),
-              buildIconBottomBar(icon:selectIndex ==3 ?Icon(Icons.personal_injury_sharp): Icon(Icons.personal_injury_outlined), index: 3, label:S.of(context).profile)
+              buildIconBottomBar(
+                icon: selectIndex == 0
+                    ? Icon(Icons.home_filled)
+                    : Icon(Icons.home_outlined),
+                index: 0,
+                label: S.of(context).home,
+              ),
+              buildIconBottomBar(
+                icon: selectIndex == 1
+                    ? Icon(Icons.location_on_sharp)
+                    : Icon(Icons.location_on_outlined),
+                index: 1,
+                label: S.of(context).maps,
+              ),
+              buildIconBottomBar(
+                  icon: selectIndex == 2
+                      ? Icon(Icons.favorite_border_rounded)
+                      : Icon(Icons.favorite_border_outlined),
+                  index: 2,
+                  label: S.of(context).loves),
+              buildIconBottomBar(
+                  icon: selectIndex == 3
+                      ? Icon(Icons.personal_injury_sharp)
+                      : Icon(Icons.personal_injury_outlined),
+                  index: 3,
+                  label: S.of(context).profile)
             ],
           ),
         ),

@@ -219,6 +219,176 @@ class S {
       args: [],
     );
   }
+
+  /// `ALl`
+  String get ALl {
+    return Intl.message(
+      'ALl',
+      name: 'ALl',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birthday`
+  String get Birthday {
+    return Intl.message(
+      'Birthday',
+      name: 'Birthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Metting`
+  String get Metting {
+    return Intl.message(
+      'Metting',
+      name: 'Metting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gaming`
+  String get Gaming {
+    return Intl.message(
+      'Gaming',
+      name: 'Gaming',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `WorkShop`
+  String get WorkShop {
+    return Intl.message(
+      'WorkShop',
+      name: 'WorkShop',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Book Club`
+  String get BookClub {
+    return Intl.message(
+      'Book Club',
+      name: 'BookClub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exhibtion`
+  String get Exhibtion {
+    return Intl.message(
+      'Exhibtion',
+      name: 'Exhibtion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Holiday`
+  String get Holiday {
+    return Intl.message(
+      'Holiday',
+      name: 'Holiday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eating`
+  String get Eating {
+    return Intl.message(
+      'Eating',
+      name: 'Eating',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Title`
+  String get title {
+    return Intl.message(
+      'Title',
+      name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get Description {
+    return Intl.message(
+      'Description',
+      name: 'Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Event Date`
+  String get EventDate {
+    return Intl.message(
+      'Event Date',
+      name: 'EventDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Event Time`
+  String get EventTime {
+    return Intl.message(
+      'Event Time',
+      name: 'EventTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose Date`
+  String get ChooseDate {
+    return Intl.message(
+      'Choose Date',
+      name: 'ChooseDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose Time`
+  String get ChooseTime {
+    return Intl.message(
+      'Choose Time',
+      name: 'ChooseTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Event`
+  String get AddEvent {
+    return Intl.message(
+      'Add Event',
+      name: 'AddEvent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose Event Location`
+  String get ChooseEventLocation {
+    return Intl.message(
+      'Choose Event Location',
+      name: 'ChooseEventLocation',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

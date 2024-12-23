@@ -22,22 +22,40 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ALl": MessageLookupByLibrary.simpleMessage("الكل"),
+        "AddEvent": MessageLookupByLibrary.simpleMessage("انشاء حذث"),
         "Arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "Birthday": MessageLookupByLibrary.simpleMessage("عيد ميلاد"),
+        "BookClub": MessageLookupByLibrary.simpleMessage("نادى"),
+        "ChooseDate": MessageLookupByLibrary.simpleMessage("التاريخ"),
+        "ChooseEventLocation":
+            MessageLookupByLibrary.simpleMessage("اختار مكان الحدث"),
+        "ChooseTime": MessageLookupByLibrary.simpleMessage("الوقت"),
         "Dark": MessageLookupByLibrary.simpleMessage("ليلى"),
+        "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
+        "Eating": MessageLookupByLibrary.simpleMessage("الاكل"),
         "English": MessageLookupByLibrary.simpleMessage("الانجليزية"),
+        "EventDate": MessageLookupByLibrary.simpleMessage("التاريخ"),
+        "EventTime": MessageLookupByLibrary.simpleMessage("الوقت"),
+        "Exhibtion": MessageLookupByLibrary.simpleMessage("سياحة"),
+        "Gaming": MessageLookupByLibrary.simpleMessage("العاب"),
+        "Holiday": MessageLookupByLibrary.simpleMessage("اجازة"),
         "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "Language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "Light": MessageLookupByLibrary.simpleMessage("نهارى"),
         "Logout": MessageLookupByLibrary.simpleMessage("خروج"),
         "Lovs": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "Maps": MessageLookupByLibrary.simpleMessage("الموقع"),
+        "Metting": MessageLookupByLibrary.simpleMessage("اجتماع"),
         "Profile": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "Theme": MessageLookupByLibrary.simpleMessage("النمط"),
         "Title": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "Welcomeback": MessageLookupByLibrary.simpleMessage("مرحبا بالعودة"),
+        "WorkShop": MessageLookupByLibrary.simpleMessage("ورشة عمل"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "loves": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "maps": MessageLookupByLibrary.simpleMessage("الموقع"),
-        "profile": MessageLookupByLibrary.simpleMessage("الصفحة الشخصية")
+        "profile": MessageLookupByLibrary.simpleMessage("الصفحة الشخصية"),
+        "title": MessageLookupByLibrary.simpleMessage("العنوان")
       };
 }

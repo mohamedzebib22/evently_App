@@ -22,22 +22,40 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "ALl": MessageLookupByLibrary.simpleMessage("ALl"),
+        "AddEvent": MessageLookupByLibrary.simpleMessage("Add Event"),
         "Arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "Birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
+        "BookClub": MessageLookupByLibrary.simpleMessage("Book Club"),
+        "ChooseDate": MessageLookupByLibrary.simpleMessage("Choose Date"),
+        "ChooseEventLocation":
+            MessageLookupByLibrary.simpleMessage("Choose Event Location"),
+        "ChooseTime": MessageLookupByLibrary.simpleMessage("Choose Time"),
         "Dark": MessageLookupByLibrary.simpleMessage("Dark"),
+        "Description": MessageLookupByLibrary.simpleMessage("Description"),
+        "Eating": MessageLookupByLibrary.simpleMessage("Eating"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
+        "EventDate": MessageLookupByLibrary.simpleMessage("Event Date"),
+        "EventTime": MessageLookupByLibrary.simpleMessage("Event Time"),
+        "Exhibtion": MessageLookupByLibrary.simpleMessage("Exhibtion"),
+        "Gaming": MessageLookupByLibrary.simpleMessage("Gaming"),
+        "Holiday": MessageLookupByLibrary.simpleMessage("Holiday"),
         "Home": MessageLookupByLibrary.simpleMessage("Home"),
         "Language": MessageLookupByLibrary.simpleMessage("language"),
         "Light": MessageLookupByLibrary.simpleMessage("Light"),
         "Logout": MessageLookupByLibrary.simpleMessage("LogOut"),
         "Lovs": MessageLookupByLibrary.simpleMessage("Lovs"),
         "Maps": MessageLookupByLibrary.simpleMessage("Maps"),
+        "Metting": MessageLookupByLibrary.simpleMessage("Metting"),
         "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "Theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "Title": MessageLookupByLibrary.simpleMessage("HomePage"),
         "Welcomeback": MessageLookupByLibrary.simpleMessage("Welcome Back"),
+        "WorkShop": MessageLookupByLibrary.simpleMessage("WorkShop"),
         "home": MessageLookupByLibrary.simpleMessage("home"),
         "loves": MessageLookupByLibrary.simpleMessage("loves"),
         "maps": MessageLookupByLibrary.simpleMessage("maps"),
-        "profile": MessageLookupByLibrary.simpleMessage("profile")
+        "profile": MessageLookupByLibrary.simpleMessage("profile"),
+        "title": MessageLookupByLibrary.simpleMessage("Title")
       };
 }

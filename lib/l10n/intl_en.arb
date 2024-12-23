@@ -15,6 +15,23 @@
     "home" : "home",
     "maps" : "maps",
     "loves" : "loves",
-    "profile" : "profile"
+    "profile" : "profile",
+    "ALl" :"ALl",
+    "Birthday" : "Birthday",
+    "Metting"  :"Metting",
+    "Gaming" :"Gaming",
+    "WorkShop" : "WorkShop",
+    "BookClub" : "Book Club",
+    "Exhibtion": "Exhibtion",
+    "Holiday":"Holiday",
+    "Eating":"Eating",
+    "title" : "Title",
+    "Description" : "Description",
+    "EventDate" : "Event Date",
+    "EventTime" : "Event Time",
+    "ChooseDate" : "Choose Date",
+    "ChooseTime" :"Choose Time",
+    "AddEvent" : "Add Event",
+    "ChooseEventLocation" : "Choose Event Location"
 
 }
