@@ -8,27 +8,38 @@ class AppTheme {
       color: Colors.white,
       size: 24,
     ),
-    
      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      
       selectedItemColor: Colors.red,
       unselectedItemColor: Colors.white,
+      showSelectedLabels: true,
       showUnselectedLabels: true,
-      showSelectedLabels: true
+     
+    ),
+
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: Colors.blue,
+
     ),
   );
 
   static final ThemeData darkTheme = ThemeData(
-    primaryColor: Colors.blue,
+    primaryColor: Color(0xff101127),
     iconTheme: IconThemeData(
       color: Colors.white,
       size: 24,
     ),
-    scaffoldBackgroundColor: Color(0xff5669FF),
+    scaffoldBackgroundColor: Color(0xff101127),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      
       selectedItemColor: Colors.red,
       unselectedItemColor: Colors.white,
       showUnselectedLabels: true,
-      showSelectedLabels: true
+    ),
+     floatingActionButtonTheme: FloatingActionButtonThemeData(
+      
+      backgroundColor:Color(0xff101127),
+      
     )
   );
 }
