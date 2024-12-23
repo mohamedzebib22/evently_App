@@ -34,6 +34,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "Profile": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "Theme": MessageLookupByLibrary.simpleMessage("النمط"),
         "Title": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
-        "Welcomeback": MessageLookupByLibrary.simpleMessage("مرحبا بالعودة")
+        "Welcomeback": MessageLookupByLibrary.simpleMessage("مرحبا بالعودة"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "loves": MessageLookupByLibrary.simpleMessage("المفضلة"),
+        "maps": MessageLookupByLibrary.simpleMessage("الموقع"),
+        "profile": MessageLookupByLibrary.simpleMessage("الصفحة الشخصية")
       };
 }

@@ -10,7 +10,7 @@ class AppTheme {
     ),
      bottomNavigationBarTheme: BottomNavigationBarThemeData(
       
-      selectedItemColor: Colors.red,
+      //selectedItemColor: Colors.red,
       unselectedItemColor: Colors.white,
       showSelectedLabels: true,
       showUnselectedLabels: true,
@@ -32,7 +32,7 @@ class AppTheme {
     scaffoldBackgroundColor: Color(0xff101127),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       
-      selectedItemColor: Colors.red,
+      //selectedItemColor: Colors.red,
       unselectedItemColor: Colors.white,
       showUnselectedLabels: true,
     ),

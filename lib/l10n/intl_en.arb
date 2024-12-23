@@ -11,6 +11,10 @@
     "Maps": "Maps",
     "Lovs" :"Lovs",
     "Profile" :"Profile",
-    "Welcomeback":"Welcome Back"
+    "Welcomeback":"Welcome Back",
+    "home" : "home",
+    "maps" : "maps",
+    "loves" : "loves",
+    "profile" : "profile"
 
 }

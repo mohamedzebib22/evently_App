@@ -54,10 +54,10 @@ class _DefultPageState extends State<DefultPage> {
               setState(() {});
             },
             items: [
-              buildIconBottomBar(icon: Icon(Icons.home_outlined), index: 0, label: 'home',),
-              buildIconBottomBar(icon: Icon(Icons.location_on), index: 1, label: 'maps',),
-              buildIconBottomBar(icon: Icon(Icons.favorite_border_outlined), index: 2, label: 'loves'),
-              buildIconBottomBar(icon: Icon(Icons.personal_injury_outlined), index: 3, label: 'profile')
+              buildIconBottomBar(icon: selectIndex ==0 ?Icon(Icons.home_filled):Icon(Icons.home_outlined), index: 0, label: S.of(context).home,),
+              buildIconBottomBar(icon:selectIndex ==1 ?Icon(Icons.location_on_sharp): Icon(Icons.location_on_outlined), index: 1, label:S.of(context).maps,),
+              buildIconBottomBar(icon:selectIndex ==2 ?Icon(Icons.favorite_border_rounded): Icon(Icons.favorite_border_outlined), index: 2, label:S.of(context).loves),
+              buildIconBottomBar(icon:selectIndex ==3 ?Icon(Icons.personal_injury_sharp): Icon(Icons.personal_injury_outlined), index: 3, label:S.of(context).profile)
             ],
           ),
         ),

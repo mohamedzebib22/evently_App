@@ -34,6 +34,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "Theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "Title": MessageLookupByLibrary.simpleMessage("HomePage"),
-        "Welcomeback": MessageLookupByLibrary.simpleMessage("Welcome Back")
+        "Welcomeback": MessageLookupByLibrary.simpleMessage("Welcome Back"),
+        "home": MessageLookupByLibrary.simpleMessage("home"),
+        "loves": MessageLookupByLibrary.simpleMessage("loves"),
+        "maps": MessageLookupByLibrary.simpleMessage("maps"),
+        "profile": MessageLookupByLibrary.simpleMessage("profile")
       };
 }
