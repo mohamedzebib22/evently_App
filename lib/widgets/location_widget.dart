@@ -10,6 +10,7 @@ class LocationWidget extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: width*0.02),
         width: width * 0.91,
         height: height * 0.07,
         decoration: BoxDecoration(
@@ -19,7 +20,7 @@ class LocationWidget extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(
-              'assets/images/route.png',
+              'assets/images/locationnow.png',
               height: height * 0.06,
               width: width * 0.11,
             ),

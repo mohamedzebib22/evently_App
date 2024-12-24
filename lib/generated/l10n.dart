@@ -389,6 +389,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Register`
+  String get Register {
+    return Intl.message(
+      'Register',
+      name: 'Register',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forget Password`
+  String get ForgetPassword {
+    return Intl.message(
+      'Forget Password',
+      name: 'ForgetPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

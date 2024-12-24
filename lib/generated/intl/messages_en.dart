@@ -38,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "EventDate": MessageLookupByLibrary.simpleMessage("Event Date"),
         "EventTime": MessageLookupByLibrary.simpleMessage("Event Time"),
         "Exhibtion": MessageLookupByLibrary.simpleMessage("Exhibtion"),
+        "ForgetPassword":
+            MessageLookupByLibrary.simpleMessage("Forget Password"),
         "Gaming": MessageLookupByLibrary.simpleMessage("Gaming"),
         "Holiday": MessageLookupByLibrary.simpleMessage("Holiday"),
         "Home": MessageLookupByLibrary.simpleMessage("Home"),
@@ -48,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Maps": MessageLookupByLibrary.simpleMessage("Maps"),
         "Metting": MessageLookupByLibrary.simpleMessage("Metting"),
         "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "Register": MessageLookupByLibrary.simpleMessage("Register"),
         "Theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "Title": MessageLookupByLibrary.simpleMessage("HomePage"),
         "Welcomeback": MessageLookupByLibrary.simpleMessage("Welcome Back"),
