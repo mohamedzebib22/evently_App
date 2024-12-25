@@ -32,6 +32,9 @@
      "ChooseDate" : "التاريخ",
     "ChooseTime" :"الوقت",
     "AddEvent" : "انشاء حذث",
-    "ChooseEventLocation" : "اختار مكان الحدث"
+    "ChooseEventLocation" : "اختار مكان الحدث",
+    "Register":"تسجيل حساب",
+    "ForgetPassword":"نسيت الباسورد",
+    "LetsStart": "ابدا"
 
 }
