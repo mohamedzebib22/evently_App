@@ -34,6 +34,7 @@
     "AddEvent" : "Add Event",
     "ChooseEventLocation" : "Choose Event Location",
     "Register":"Register",
-    "ForgetPassword":"Forget Password"
+    "ForgetPassword":"Forget Password",
+    "LetsStart": "Let’s Start"
 
 }

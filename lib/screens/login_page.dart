@@ -1,5 +1,6 @@
 import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/providers/app_theme.dart';
+import 'package:evently_app/screens/defult_page.dart';
 import 'package:evently_app/screens/forget_password_page.dart';
 import 'package:evently_app/screens/register_page.dart';
 import 'package:evently_app/widgets/custom_button.dart';
@@ -78,7 +79,12 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: height * 0.02,
               ),
-              CustomButton(title: 'Login', width: double.infinity),
+              CustomButton(
+                  title: 'Login',
+                  width: double.infinity,
+                  onTap: () {
+                    Navigator.pushNamed(context, DefultPage.id);
+                  }),
               SizedBox(
                 height: height * 0.02,
               ),

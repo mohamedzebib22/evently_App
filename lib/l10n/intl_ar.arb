@@ -34,6 +34,7 @@
     "AddEvent" : "انشاء حذث",
     "ChooseEventLocation" : "اختار مكان الحدث",
     "Register":"تسجيل حساب",
-    "ForgetPassword":"نسيت الباسورد"
+    "ForgetPassword":"نسيت الباسورد",
+    "LetsStart": "ابدا"
 
 }

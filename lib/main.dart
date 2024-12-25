@@ -5,6 +5,7 @@ import 'package:evently_app/providers/app_theme.dart';
 import 'package:evently_app/screens/create_event.dart';
 import 'package:evently_app/screens/defult_page.dart';
 import 'package:evently_app/screens/forget_password_page.dart';
+import 'package:evently_app/screens/intro_page.dart';
 import 'package:evently_app/screens/login_page.dart';
 import 'package:evently_app/screens/register_page.dart';
 import 'package:flutter/material.dart';
@@ -29,10 +30,12 @@ class EventelyApp extends StatelessWidget {
     var themeProvider =Provider.of<AppThemeProvider>(context);
     return MaterialApp(
       routes: {
+        DefultPage.id : (context) => DefultPage(),
        CreateEvent.id : (context) =>CreateEvent(),
        LoginPage.id : (context) => LoginPage(),
        RegisterPage.id :(context) => RegisterPage(),
-       ForgetPasswordPage.id :(context) =>ForgetPasswordPage()
+       ForgetPasswordPage.id :(context) =>ForgetPasswordPage(),
+       IntroPage.id :(context) => IntroPage()
       },
 
       // initialRoute: ProfilePage.id,
@@ -49,7 +52,7 @@ class EventelyApp extends StatelessWidget {
       ],
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: IntroPage(),
     );
   }
 }

@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Holiday": MessageLookupByLibrary.simpleMessage("اجازة"),
         "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "Language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "LetsStart": MessageLookupByLibrary.simpleMessage("ابدا"),
         "Light": MessageLookupByLibrary.simpleMessage("نهارى"),
         "Logout": MessageLookupByLibrary.simpleMessage("خروج"),
         "Lovs": MessageLookupByLibrary.simpleMessage("المفضلة"),
