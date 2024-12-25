@@ -16,6 +16,7 @@ class ForgetPasswordPage extends StatelessWidget {
     var themeProvider = Provider.of<AppThemeProvider>(context);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: themeProvider.appTheme == ThemeMode.light ? Colors.transparent:Color(0xff101127),
         toolbarHeight: height * .06,
         centerTitle: true,
         title: Text(

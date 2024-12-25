@@ -1,4 +1,4 @@
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+
 import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/models/theme_data.dart';
@@ -26,6 +26,7 @@ class _DefultPageState extends State<DefultPage> {
   int selectIndex = 0;
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
