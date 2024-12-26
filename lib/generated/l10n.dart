@@ -419,6 +419,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Choose your preferred theme and language to\nget started with a comfortable, tailored\nexperience that suits your style`
+  String get bodyIntro {
+    return Intl.message(
+      'Choose your preferred theme and language to\nget started with a comfortable, tailored\nexperience that suits your style',
+      name: 'bodyIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Personalize Your Experience`
+  String get SubTitle {
+    return Intl.message(
+      'Personalize Your Experience',
+      name: 'SubTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

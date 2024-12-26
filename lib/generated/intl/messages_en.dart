@@ -52,10 +52,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "Metting": MessageLookupByLibrary.simpleMessage("Metting"),
         "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "Register": MessageLookupByLibrary.simpleMessage("Register"),
+        "SubTitle":
+            MessageLookupByLibrary.simpleMessage("Personalize Your Experience"),
         "Theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "Title": MessageLookupByLibrary.simpleMessage("HomePage"),
         "Welcomeback": MessageLookupByLibrary.simpleMessage("Welcome Back"),
         "WorkShop": MessageLookupByLibrary.simpleMessage("WorkShop"),
+        "bodyIntro": MessageLookupByLibrary.simpleMessage(
+            "Choose your preferred theme and language to\nget started with a comfortable, tailored\nexperience that suits your style"),
         "home": MessageLookupByLibrary.simpleMessage("home"),
         "loves": MessageLookupByLibrary.simpleMessage("loves"),
         "maps": MessageLookupByLibrary.simpleMessage("maps"),

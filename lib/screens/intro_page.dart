@@ -3,6 +3,7 @@ import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/providers/app_language.dart';
 import 'package:evently_app/providers/app_theme.dart';
+import 'package:evently_app/screens/defult_page.dart';
 import 'package:evently_app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -26,7 +27,9 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
     var themeProvider = Provider.of<AppThemeProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: themeProvider.appTheme == ThemeMode.light ? Colors.transparent:Color(0xff101127),
+        backgroundColor: themeProvider.appTheme == ThemeMode.light
+            ? Colors.transparent
+            : Color(0xff101127),
         title: Image.asset('assets/images/intrologo.png'),
         centerTitle: true,
       ),
@@ -42,16 +45,14 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
               height: height * 0.44,
             ),
             Text(
-              'Personalize Your Experience',
+              S.of(context).SubTitle,
               style: TextStyle(
                   color: ColorsApp.kPrimaryColor,
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             ),
             Text(
-              "Choose your preferred theme and language to"
-              "get started with a comfortable, tailored "
-              "experience that suits your style.",
+             S.of(context).bodyIntro,
               style: TextStyle(
                   color: themeProvider.appTheme == ThemeMode.light
                       ? Colors.black
@@ -79,7 +80,7 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
                 isActive2 = value;
                 if (isActive2 != false) {
                   themeProvider.changedTheme(ThemeMode.dark);
-                }else{
+                } else {
                   themeProvider.changedTheme(ThemeMode.light);
                 }
                 setState(() {});
@@ -89,7 +90,13 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
               isActive: isActive2 ?? false,
               title: S.of(context).Theme,
             ),
-            CustomButton(title: S.of(context).LetsStart, width: double.infinity)
+            CustomButton(
+              title: S.of(context).LetsStart,
+              width: double.infinity,
+              onTap: () {
+                Navigator.pushNamed(context, DefultPage.id);
+              },
+            )
           ],
         ),
       ),
