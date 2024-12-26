@@ -4,6 +4,7 @@ import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/providers/app_language.dart';
 import 'package:evently_app/providers/app_theme.dart';
 import 'package:evently_app/screens/defult_page.dart';
+import 'package:evently_app/screens/login_page.dart';
 import 'package:evently_app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -94,7 +95,7 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
               title: S.of(context).LetsStart,
               width: double.infinity,
               onTap: () {
-                Navigator.pushNamed(context, DefultPage.id);
+                Navigator.pushNamed(context, LoginPage.id);
               },
             )
           ],
