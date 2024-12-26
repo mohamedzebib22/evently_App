@@ -7,6 +7,7 @@ import 'package:evently_app/screens/defult_page.dart';
 import 'package:evently_app/screens/forget_password_page.dart';
 import 'package:evently_app/screens/intro_page.dart';
 import 'package:evently_app/screens/login_page.dart';
+import 'package:evently_app/screens/onboardinscreen.dart';
 import 'package:evently_app/screens/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -35,7 +36,8 @@ class EventelyApp extends StatelessWidget {
        LoginPage.id : (context) => LoginPage(),
        RegisterPage.id :(context) => RegisterPage(),
        ForgetPasswordPage.id :(context) =>ForgetPasswordPage(),
-       IntroPage.id :(context) => IntroPage()
+       IntroPage.id :(context) => IntroPage(),
+       Onboardinscreen.id :(context) =>Onboardinscreen()
       },
 
       // initialRoute: ProfilePage.id,
