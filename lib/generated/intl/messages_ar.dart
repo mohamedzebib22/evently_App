@@ -51,10 +51,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "Metting": MessageLookupByLibrary.simpleMessage("اجتماع"),
         "Profile": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "Register": MessageLookupByLibrary.simpleMessage("تسجيل حساب"),
+        "SubTitle": MessageLookupByLibrary.simpleMessage("قم بتخصيص تجربتك"),
         "Theme": MessageLookupByLibrary.simpleMessage("النمط"),
         "Title": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "Welcomeback": MessageLookupByLibrary.simpleMessage("مرحبا بالعودة"),
         "WorkShop": MessageLookupByLibrary.simpleMessage("ورشة عمل"),
+        "bodyIntro": MessageLookupByLibrary.simpleMessage(
+            "اختر السمة واللغة المفضلة\n لديك لبدء تجربة مريحة\n ومصممة خصيصًا لتناسب أسلوبك"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "loves": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "maps": MessageLookupByLibrary.simpleMessage("الموقع"),

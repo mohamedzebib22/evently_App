@@ -35,6 +35,8 @@
     "ChooseEventLocation" : "Choose Event Location",
     "Register":"Register",
     "ForgetPassword":"Forget Password",
-    "LetsStart": "Let’s Start"
-
+    "LetsStart": "Let’s Start",
+    "bodyIntro" : "Choose your preferred theme and language to\nget started with a comfortable, tailored\nexperience that suits your style",
+    "SubTitle" :"Personalize Your Experience"
+              
 }
