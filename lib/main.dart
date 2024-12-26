@@ -9,35 +9,65 @@ import 'package:evently_app/screens/intro_page.dart';
 import 'package:evently_app/screens/login_page.dart';
 import 'package:evently_app/screens/onboardinscreen.dart';
 import 'package:evently_app/screens/register_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(create: (context) => AppLanguageProvider()),
-      ChangeNotifierProvider(create: (context) => AppThemeProvider()),
-    ],
-    child: const EventelyApp()));
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+   options: FirebaseOptions(
+    apiKey: 'AIzaSyDQMcUpo6aSvlAAJyfDXBgJiNd1GLYU83A',
+    appId: '1:155057485552:android:0b82281c8a2839146d7435',
+    messagingSenderId: '155057485552',
+    projectId: 'eventapp-9dff0',
+    storageBucket: 'eventapp-9dff0.firebasestorage.app',
+  )
+  );
+
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (context) => AppLanguageProvider()),
+    ChangeNotifierProvider(create: (context) => AppThemeProvider()),
+  ], child: const EventelyApp()));
 }
 
-class EventelyApp extends StatelessWidget {
+class EventelyApp extends StatefulWidget {
   const EventelyApp({super.key});
+
+  @override
+  State<EventelyApp> createState() => _EventelyAppState();
+}
+
+class _EventelyAppState extends State<EventelyApp> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      if (user == null) {
+        print('==============User is currently signed out!=====================');
+      } else {
+        print('=======================User is signed in! ====================');
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     var languageProvider = Provider.of<AppLanguageProvider>(context);
-    var themeProvider =Provider.of<AppThemeProvider>(context);
+    var themeProvider = Provider.of<AppThemeProvider>(context);
     return MaterialApp(
       routes: {
-        DefultPage.id : (context) => DefultPage(),
-       CreateEvent.id : (context) =>CreateEvent(),
-       LoginPage.id : (context) => LoginPage(),
-       RegisterPage.id :(context) => RegisterPage(),
-       ForgetPasswordPage.id :(context) =>ForgetPasswordPage(),
-       IntroPage.id :(context) => IntroPage(),
-       Onboardinscreen.id :(context) =>Onboardinscreen()
+        DefultPage.id: (context) => DefultPage(),
+        CreateEvent.id: (context) => CreateEvent(),
+        LoginPage.id: (context) => LoginPage(),
+        RegisterPage.id: (context) => RegisterPage(),
+        ForgetPasswordPage.id: (context) => ForgetPasswordPage(),
+        IntroPage.id: (context) => IntroPage(),
+        Onboardinscreen.id: (context) => Onboardinscreen()
       },
 
       // initialRoute: ProfilePage.id,
