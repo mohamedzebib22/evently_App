@@ -31,13 +31,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "ChooseEventLocation":
             MessageLookupByLibrary.simpleMessage("Choose Event Location"),
         "ChooseTime": MessageLookupByLibrary.simpleMessage("Choose Time"),
+        "ConnectwithFriendsShareMoments": MessageLookupByLibrary.simpleMessage(
+            "Connect with Friends & Share Moments"),
         "Dark": MessageLookupByLibrary.simpleMessage("Dark"),
         "Description": MessageLookupByLibrary.simpleMessage("Description"),
         "Eating": MessageLookupByLibrary.simpleMessage("Eating"),
+        "EffortlessEventPlanning":
+            MessageLookupByLibrary.simpleMessage("Effortless Event Planning"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
         "EventDate": MessageLookupByLibrary.simpleMessage("Event Date"),
         "EventTime": MessageLookupByLibrary.simpleMessage("Event Time"),
         "Exhibtion": MessageLookupByLibrary.simpleMessage("Exhibtion"),
+        "FindEventsThatInspireYou": MessageLookupByLibrary.simpleMessage(
+            "Find Events That Inspire You"),
         "ForgetPassword":
             MessageLookupByLibrary.simpleMessage("Forget Password"),
         "Gaming": MessageLookupByLibrary.simpleMessage("Gaming"),
@@ -61,6 +67,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "bodyIntro": MessageLookupByLibrary.simpleMessage(
             "Choose your preferred theme and language to\nget started with a comfortable, tailored\nexperience that suits your style"),
         "home": MessageLookupByLibrary.simpleMessage("home"),
+        "intoPage2Body": MessageLookupByLibrary.simpleMessage(
+            "Take the hassle out of organizing events with our all-in-one planning tools. \nFrom setting up invites and managing RSVPs to scheduling reminders and coordinating details, \nwe’ve got you covered. \nPlan with ease and focus on what matters – creating an unforgettable experience for you and your guests."),
+        "introPage3Body": MessageLookupByLibrary.simpleMessage(
+            "Make every event memorable by sharing the experience with others. \nOur platform lets you invite friends, keep everyone in the loop, and celebrate moments together. \nCapture and share the excitement with your network, \nso you can relive the highlights and cherish the memories."),
+        "intropage1Body": MessageLookupByLibrary.simpleMessage(
+            "Dive into a world of events crafted to fit your unique interests. \nWhether you\'re into live music, art workshops, professional networking, or simply discovering new experiences, \nwe have something for everyone. \nOur curated recommendations will help you explore, connect, and make the most of every opportunity around you."),
         "loves": MessageLookupByLibrary.simpleMessage("loves"),
         "maps": MessageLookupByLibrary.simpleMessage("maps"),
         "profile": MessageLookupByLibrary.simpleMessage("profile"),

@@ -31,13 +31,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "ChooseEventLocation":
             MessageLookupByLibrary.simpleMessage("اختار مكان الحدث"),
         "ChooseTime": MessageLookupByLibrary.simpleMessage("الوقت"),
+        "ConnectwithFriendsShareMoments": MessageLookupByLibrary.simpleMessage(
+            "تواصل مع الأصدقاء وشارك اللحظات"),
         "Dark": MessageLookupByLibrary.simpleMessage("ليلى"),
         "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
         "Eating": MessageLookupByLibrary.simpleMessage("الاكل"),
+        "EffortlessEventPlanning":
+            MessageLookupByLibrary.simpleMessage("تخطيط الأحداث دون عناء"),
         "English": MessageLookupByLibrary.simpleMessage("الانجليزية"),
         "EventDate": MessageLookupByLibrary.simpleMessage("التاريخ"),
         "EventTime": MessageLookupByLibrary.simpleMessage("الوقت"),
         "Exhibtion": MessageLookupByLibrary.simpleMessage("سياحة"),
+        "FindEventsThatInspireYou":
+            MessageLookupByLibrary.simpleMessage("ابحث عن الأحداث التي تلهمك"),
         "ForgetPassword": MessageLookupByLibrary.simpleMessage("نسيت الباسورد"),
         "Gaming": MessageLookupByLibrary.simpleMessage("العاب"),
         "Holiday": MessageLookupByLibrary.simpleMessage("اجازة"),
@@ -59,6 +65,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "bodyIntro": MessageLookupByLibrary.simpleMessage(
             "اختر السمة واللغة المفضلة\n لديك لبدء تجربة مريحة\n ومصممة خصيصًا لتناسب أسلوبك"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "intoPage2Body": MessageLookupByLibrary.simpleMessage(
+            "تخلص من عناء تنظيم الفعاليات باستخدام أدوات التخطيط الشاملة لدينا. \nمن إعداد الدعوات وإدارة الردود إلى جدولة التذكيرات وتنسيق التفاصيل، \nنحن نهتم بكل شيء. \nخطط بسهولة وركز على ما يهم – خلق تجربة لا تُنسى لك ولضيوفك"),
+        "introPage3Body": MessageLookupByLibrary.simpleMessage(
+            "اجعل كل فعالية لا تُنسى بمشاركة التجربة مع الآخرين. \nتتيح لك منصتنا دعوة الأصدقاء، وإبقاء الجميع على اطلاع، والاحتفال باللحظات معًا. \nقم بالتقاط ومشاركة الحماس مع شبكتك، \nلتتمكن من استعادة اللحظات الرائعة وحفظ الذكريات الجميلة"),
+        "intropage1Body": MessageLookupByLibrary.simpleMessage(
+            "استكشف عالمًا من الفعاليات المصممة لتناسب اهتماماتك الفريدة. \nسواء كنت مهتمًا بالموسيقى الحية، أو ورش العمل الفنية، أو التواصل المهني، أو ببساطة اكتشاف تجارب جديدة، \nلدينا ما يناسب الجميع. \nتوصياتنا المنسقة ستساعدك على الاستكشاف، والتواصل، والاستفادة القصوى من كل فرصة حولك."),
         "loves": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "maps": MessageLookupByLibrary.simpleMessage("الموقع"),
         "profile": MessageLookupByLibrary.simpleMessage("الصفحة الشخصية"),

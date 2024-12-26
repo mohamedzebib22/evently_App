@@ -439,6 +439,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Find Events That Inspire You`
+  String get FindEventsThatInspireYou {
+    return Intl.message(
+      'Find Events That Inspire You',
+      name: 'FindEventsThatInspireYou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Effortless Event Planning`
+  String get EffortlessEventPlanning {
+    return Intl.message(
+      'Effortless Event Planning',
+      name: 'EffortlessEventPlanning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connect with Friends & Share Moments`
+  String get ConnectwithFriendsShareMoments {
+    return Intl.message(
+      'Connect with Friends & Share Moments',
+      name: 'ConnectwithFriendsShareMoments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dive into a world of events crafted to fit your unique interests. \nWhether you're into live music, art workshops, professional networking, or simply discovering new experiences, \nwe have something for everyone. \nOur curated recommendations will help you explore, connect, and make the most of every opportunity around you.`
+  String get intropage1Body {
+    return Intl.message(
+      'Dive into a world of events crafted to fit your unique interests. \nWhether you\'re into live music, art workshops, professional networking, or simply discovering new experiences, \nwe have something for everyone. \nOur curated recommendations will help you explore, connect, and make the most of every opportunity around you.',
+      name: 'intropage1Body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Take the hassle out of organizing events with our all-in-one planning tools. \nFrom setting up invites and managing RSVPs to scheduling reminders and coordinating details, \nwe’ve got you covered. \nPlan with ease and focus on what matters – creating an unforgettable experience for you and your guests.`
+  String get intoPage2Body {
+    return Intl.message(
+      'Take the hassle out of organizing events with our all-in-one planning tools. \nFrom setting up invites and managing RSVPs to scheduling reminders and coordinating details, \nwe’ve got you covered. \nPlan with ease and focus on what matters – creating an unforgettable experience for you and your guests.',
+      name: 'intoPage2Body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Make every event memorable by sharing the experience with others. \nOur platform lets you invite friends, keep everyone in the loop, and celebrate moments together. \nCapture and share the excitement with your network, \nso you can relive the highlights and cherish the memories.`
+  String get introPage3Body {
+    return Intl.message(
+      'Make every event memorable by sharing the experience with others. \nOur platform lets you invite friends, keep everyone in the loop, and celebrate moments together. \nCapture and share the excitement with your network, \nso you can relive the highlights and cherish the memories.',
+      name: 'introPage3Body',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
