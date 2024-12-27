@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/theme_data.dart';
 import 'package:evently_app/providers/app_language.dart';
@@ -15,19 +16,17 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-   options: FirebaseOptions(
+      options: FirebaseOptions(
     apiKey: 'AIzaSyDQMcUpo6aSvlAAJyfDXBgJiNd1GLYU83A',
     appId: '1:155057485552:android:0b82281c8a2839146d7435',
     messagingSenderId: '155057485552',
     projectId: 'eventapp-9dff0',
     storageBucket: 'eventapp-9dff0.firebasestorage.app',
-  )
-  );
-
+  ));
+  await FirebaseFirestore.instance.disableNetwork();
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => AppLanguageProvider()),
     ChangeNotifierProvider(create: (context) => AppThemeProvider()),
@@ -48,7 +47,8 @@ class _EventelyAppState extends State<EventelyApp> {
     super.initState();
     FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user == null) {
-        print('==============User is currently signed out!=====================');
+        print(
+            '==============User is currently signed out!=====================');
       } else {
         print('=======================User is signed in! ====================');
       }

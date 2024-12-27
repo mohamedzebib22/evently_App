@@ -3,10 +3,10 @@ import 'package:evently_app/models/colors_app.dart';
 import 'package:flutter/material.dart';
 
 class ChooseDateAndTime extends StatelessWidget {
-  ChooseDateAndTime({super.key,required this.eventName,required this.eventTime, this.icon});
+  ChooseDateAndTime({super.key,required this.eventName,required this.eventTime, this.icon , required this.onChangedateAndTime});
   String eventName;
   String eventTime;
-
+  VoidCallback onChangedateAndTime;
   IconData? icon;
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,12 @@ class ChooseDateAndTime extends StatelessWidget {
           style: TextStyle(fontSize: 16),
         ),
         Spacer(),
-        Text(
-          eventTime,
-          style: TextStyle(fontSize: 16, color: ColorsApp.kPrimaryColor),
+        InkWell(
+          onTap: onChangedateAndTime,
+          child: Text(
+            eventTime,
+            style: TextStyle(fontSize: 16, color: ColorsApp.kPrimaryColor),
+          ),
         ),
       ],
     );
