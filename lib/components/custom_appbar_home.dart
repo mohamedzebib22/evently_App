@@ -1,7 +1,9 @@
 import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/colors_app.dart';
+import 'package:evently_app/providers/get_all_event.dart';
 import 'package:evently_app/widgets/tap_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class CustomAppbarHome extends StatefulWidget {
   const CustomAppbarHome({super.key});
@@ -11,10 +13,9 @@ class CustomAppbarHome extends StatefulWidget {
 }
 
 class _CustomAppbarHomeState extends State<CustomAppbarHome> {
-  int selectedIndex = 0;
-
   @override
   Widget build(BuildContext context) {
+    var listProvider = Provider.of<GetAllEventProvider>(context);
     List<String> eventsNameList = [
       S.of(context).ALl,
       S.of(context).Birthday,
@@ -90,8 +91,7 @@ class _CustomAppbarHomeState extends State<CustomAppbarHome> {
                 dividerColor: Colors.transparent,
                 labelPadding: EdgeInsets.zero,
                 onTap: (index) {
-                  selectedIndex = index;
-                  setState(() {});
+                  listProvider.changeDate(index);
                 },
                 unselectedLabelColor: Colors.white,
                 labelStyle: TextStyle(color: Colors.amber),
@@ -100,13 +100,14 @@ class _CustomAppbarHomeState extends State<CustomAppbarHome> {
                   return TapWidget(
                     eventName: eventName,
                     isSelected:
-                        selectedIndex == eventsNameList.indexOf(eventName)
+                        listProvider.selectIndex == eventsNameList.indexOf(eventName)
                             ? true
                             : false,
                     selected: Colors.white,
                     unSelected: Colors.transparent,
                     selectedItem: ColorsApp.kPrimaryColor,
-                    unselectedItem: Colors.white, borderColor: Colors.white,
+                    unselectedItem: Colors.white,
+                    borderColor: Colors.white,
                   );
                 }).toList(),
               ),

@@ -2,12 +2,14 @@ import 'package:evently_app/components/choose_date_and_time.dart';
 import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/models/event.dart';
+import 'package:evently_app/providers/get_all_event.dart';
 import 'package:evently_app/utils/firebase_utils.dart';
 import 'package:evently_app/widgets/custom_button.dart';
 import 'package:evently_app/widgets/custom_text_feild.dart';
 import 'package:evently_app/widgets/location_widget.dart';
 import 'package:evently_app/widgets/tap_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class CreateEvent extends StatefulWidget {
   CreateEvent({super.key});
@@ -28,8 +30,11 @@ class _CreateEventState extends State<CreateEvent> {
   var formatTime = '';
   var titleEvent = '';
   var descEvent = '';
+
+  late GetAllEventProvider ListProvider;
   @override
   Widget build(BuildContext context) {
+    ListProvider = Provider.of<GetAllEventProvider>(context);
     List<String> eventsNameList = [
       "ALl",
       "Birthday",
@@ -193,9 +198,13 @@ class _CreateEventState extends State<CreateEvent> {
           time: formatTime);
       FirebaseUtils.addEvent(event).timeout(Duration(milliseconds: 500),
           onTimeout: () {
-        print('${event.image}\n${event.nameEvent}\n${event.tilte}\n${event.description}\n${event.date}\n${event.time}');
+        print(
+            '${event.image}\n${event.nameEvent}\n${event.tilte}\n${event.description}\n${event.date}\n${event.time}\n${event.id}');
         print('Event add sucssefuly');
+        ListProvider.getDatafromFirestore();
+        Navigator.pop(context);
       });
+      
     }
   }
 
