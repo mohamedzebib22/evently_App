@@ -3,6 +3,7 @@ import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/theme_data.dart';
 import 'package:evently_app/providers/app_language.dart';
 import 'package:evently_app/providers/app_theme.dart';
+import 'package:evently_app/providers/get_all_event.dart';
 import 'package:evently_app/screens/create_event.dart';
 import 'package:evently_app/screens/defult_page.dart';
 import 'package:evently_app/screens/forget_password_page.dart';
@@ -30,6 +31,7 @@ void main() async {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => AppLanguageProvider()),
     ChangeNotifierProvider(create: (context) => AppThemeProvider()),
+    ChangeNotifierProvider(create: (context) => GetAllEventProvider()),
   ], child: const EventelyApp()));
 }
 
@@ -84,7 +86,7 @@ class _EventelyAppState extends State<EventelyApp> {
       ],
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
-      home: IntroPage(),
+      home:DefultPage(),
     );
   }
 }

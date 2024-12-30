@@ -28,7 +28,7 @@ class LovesPage extends StatelessWidget {
           child: ListView.builder(
             itemCount: 20,
             itemBuilder: (context, index) {
-            return CardEvent();
+            return Container();
           }),
         )
       ],
