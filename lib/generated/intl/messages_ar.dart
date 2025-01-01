@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تخطيط الأحداث دون عناء"),
         "English": MessageLookupByLibrary.simpleMessage("الانجليزية"),
         "EventDate": MessageLookupByLibrary.simpleMessage("التاريخ"),
+        "EventDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الحدث"),
         "EventTime": MessageLookupByLibrary.simpleMessage("الوقت"),
         "Exhibtion": MessageLookupByLibrary.simpleMessage("سياحة"),
         "FindEventsThatInspireYou":
@@ -74,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loves": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "maps": MessageLookupByLibrary.simpleMessage("الموقع"),
         "profile": MessageLookupByLibrary.simpleMessage("الصفحة الشخصية"),
+        "sport": MessageLookupByLibrary.simpleMessage("رياضة"),
         "title": MessageLookupByLibrary.simpleMessage("العنوان")
       };
 }

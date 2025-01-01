@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class GetAllEventProvider extends ChangeNotifier {
   List<String> eventsNameList = [
     "ALl",
+    "sport",
     "Birthday",
     "Metting",
     "Gaming",
@@ -46,3 +47,4 @@ class GetAllEventProvider extends ChangeNotifier {
     }
   }
 }
+

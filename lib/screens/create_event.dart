@@ -1,4 +1,5 @@
 import 'package:evently_app/components/choose_date_and_time.dart';
+import 'package:evently_app/constants/const.dart';
 import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/models/event.dart';
@@ -37,6 +38,7 @@ class _CreateEventState extends State<CreateEvent> {
     ListProvider = Provider.of<GetAllEventProvider>(context);
     List<String> eventsNameList = [
       "ALl",
+      "sport",
       "Birthday",
       "Metting",
       "Gaming",
@@ -47,15 +49,16 @@ class _CreateEventState extends State<CreateEvent> {
       "Eating",
     ];
     Map<String, dynamic> eventsNameAndImag = {
-      "ALl": 'assets/images/bookclub.png',
-      "Birthday": 'assets/images/route.png',
-      "Metting": 'assets/images/bookclub.png',
-      "Gaming": 'assets/images/route.png',
-      "WorkShop": 'assets/images/bookclub.png',
-      "BookClub": 'assets/images/route.png',
-      "Exhibtion": 'assets/images/bookclub.png',
-      "Holiday": 'assets/images/route.png',
-      "Eating": 'assets/images/bookclub.png',
+      "ALl": sport,
+      "sport": sport,
+      "Birthday": birthday,
+      "Metting": metting,
+      "Gaming": gaming,
+      "WorkShop": workShop,
+      "BookClub": bookClub,
+      "Exhibtion": exhibtion,
+      "Holiday": holiday,
+      "Eating": eating,
     };
 
     var width = MediaQuery.of(context).size.width;

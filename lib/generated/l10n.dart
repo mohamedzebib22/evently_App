@@ -230,6 +230,16 @@ class S {
     );
   }
 
+  /// `sport`
+  String get sport {
+    return Intl.message(
+      'sport',
+      name: 'sport',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Birthday`
   String get Birthday {
     return Intl.message(
@@ -495,6 +505,16 @@ class S {
     return Intl.message(
       'Make every event memorable by sharing the experience with others. \nOur platform lets you invite friends, keep everyone in the loop, and celebrate moments together. \nCapture and share the excitement with your network, \nso you can relive the highlights and cherish the memories.',
       name: 'introPage3Body',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Event Details`
+  String get EventDetails {
+    return Intl.message(
+      'Event Details',
+      name: 'EventDetails',
       desc: '',
       args: [],
     );
