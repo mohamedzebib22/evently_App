@@ -40,6 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Effortless Event Planning"),
         "English": MessageLookupByLibrary.simpleMessage("English"),
         "EventDate": MessageLookupByLibrary.simpleMessage("Event Date"),
+        "EventDetails": MessageLookupByLibrary.simpleMessage("Event Details"),
         "EventTime": MessageLookupByLibrary.simpleMessage("Event Time"),
         "Exhibtion": MessageLookupByLibrary.simpleMessage("Exhibtion"),
         "FindEventsThatInspireYou": MessageLookupByLibrary.simpleMessage(
@@ -76,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "loves": MessageLookupByLibrary.simpleMessage("loves"),
         "maps": MessageLookupByLibrary.simpleMessage("maps"),
         "profile": MessageLookupByLibrary.simpleMessage("profile"),
+        "sport": MessageLookupByLibrary.simpleMessage("sport"),
         "title": MessageLookupByLibrary.simpleMessage("Title")
       };
 }

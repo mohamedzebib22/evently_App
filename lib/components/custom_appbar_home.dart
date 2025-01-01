@@ -18,6 +18,7 @@ class _CustomAppbarHomeState extends State<CustomAppbarHome> {
     var listProvider = Provider.of<GetAllEventProvider>(context);
     List<String> eventsNameList = [
       S.of(context).ALl,
+      S.of(context).sport,
       S.of(context).Birthday,
       S.of(context).Metting,
       S.of(context).Gaming,

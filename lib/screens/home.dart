@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:evently_app/components/custom_appbar_home.dart';
 import 'package:evently_app/models/event.dart';
 import 'package:evently_app/providers/get_all_event.dart';
+import 'package:evently_app/screens/get_desc_event.dart';
 import 'package:evently_app/utils/firebase_utils.dart';
 import 'package:evently_app/widgets/card_event.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -17,6 +18,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  
   @override
   Widget build(BuildContext context) {
     var listProvider = Provider.of<GetAllEventProvider>(context);
@@ -35,8 +37,13 @@ class _HomeState extends State<Home> {
                 padding: EdgeInsets.zero,
                 itemCount: listProvider.eventList.length,
                 itemBuilder: (context, index) {
-                  return CardEvent(
-                    event: listProvider.eventList[index],
+                  return InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, GetDescEvent.id,arguments: listProvider.eventList[index]);
+                    },
+                    child: CardEvent(
+                      event: listProvider.eventList[index],
+                    ),
                   );
                 }),
           )
