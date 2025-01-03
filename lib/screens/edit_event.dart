@@ -5,6 +5,7 @@ import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/models/event.dart';
 import 'package:evently_app/providers/get_all_event.dart';
 import 'package:evently_app/screens/defult_page.dart';
+import 'package:evently_app/screens/home.dart';
 import 'package:evently_app/utils/firebase_utils.dart';
 import 'package:evently_app/widgets/custom_button.dart';
 import 'package:evently_app/widgets/custom_text_feild.dart';
@@ -224,19 +225,18 @@ class _CreateEventState extends State<EditEvent> {
                         'tilte': newTitle == null ? titleEvent : newTitle,
                         'description': newDesc == null ? descEvent : newDesc,
                         // 'isFavorite': isFavorite,
-                        'date': selectDate == null? S.of(context).ChooseDate: '${selectDate!.day}/${selectDate!.month}/${selectDate!.year}',
-                        'time': selectTime == null ? args.time! : formatTime,
+                        // 'date': selectDate == null? S.of(context).ChooseDate: '${selectDate!.day}/${selectDate!.month}/${selectDate!.year}',
+                        // 'time': selectTime == null ? args.time! : formatTime,
                       });
 
                       print(
                           '${newImage.isEmpty ? currentImage : newImage}\n${newEventName == null ? currentName : newEventName}\n${newTitle == null ? titleEvent : newTitle}\n${newDesc == null ? descEvent : newDesc}\n${selectDate == null ? formattedDate : selectDate}\n${formatTime == null ? args.time : formatTime}');
                       dataProvider.getDatafromFirestore();
-                      Navigator.pushReplacementNamed(context, DefultPage.id);
+                      
                     } catch (e) {
                       print('The error is $e');
                     }
-                    // dataProvider.getDatafromFirestore();
-                    // Navigator.pop(context);
+                    Navigator.pushReplacementNamed(context, DefultPage.id);
                   },
                 )
               ],
