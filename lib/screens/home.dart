@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
   
   @override
   Widget build(BuildContext context) {
-    var listProvider = Provider.of<GetAllEventProvider>(context);
+   var listProvider = Provider. of<GetAllEventProvider>(context);
     if (listProvider.eventList.isEmpty) {
       listProvider.getDatafromFirestore();
     }

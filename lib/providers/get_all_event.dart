@@ -19,11 +19,25 @@ class GetAllEventProvider extends ChangeNotifier {
   List<Event> eventList = [];
 
   getDatafromFirestore() async {
-    var querySnapshot = await FirebaseUtils.getEventCollection().orderBy('date' ,descending: true).get();
+    var querySnapshot = await FirebaseUtils.getEventCollection()
+        .orderBy('date', descending: true)
+        .get();
     eventList = querySnapshot.docs.map((docs) {
       return docs.data();
     }).toList();
 
+    notifyListeners();
+  }
+
+  getIsFavofiteDataFromFirestore() async {
+    var querySnapshot = await FirebaseUtils.getEventCollection()
+        .where('isFavorite', isEqualTo: true)
+        .orderBy('date', descending: true)
+        .get();
+
+    eventList = querySnapshot.docs.map((docs) {
+      return docs.data();
+    }).toList();
     notifyListeners();
   }
 
@@ -47,4 +61,3 @@ class GetAllEventProvider extends ChangeNotifier {
     }
   }
 }
-

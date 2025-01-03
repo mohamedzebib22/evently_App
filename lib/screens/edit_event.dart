@@ -106,9 +106,8 @@ class _CreateEventState extends State<EditEvent> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Image.asset(
-                    newImage == null || newImage.isEmpty
-                        ? currentImage
-                        : eventsNameAndImag[newEventName],
+                    newImage.isEmpty ? currentImage! : newImage,
+                    //eventsNameAndImag[newEventName],
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -128,12 +127,11 @@ class _CreateEventState extends State<EditEvent> {
                             print('Current image is $newImage');
                           },
                           child: TapWidget(
-                            eventName: newEventName == null
-                                ? currentName!
-                                : newEventName = eventsNameList[index],
+                            eventName: eventsNameList[index],
                             isSelected: selectedIndex == null
                                 ? currentName == eventsNameList[index]
                                 : selectedIndex == index,
+
                             selected: ColorsApp.kPrimaryColor,
                             unSelected: Colors.transparent,
                             selectedItem: Colors.white,
@@ -150,7 +148,9 @@ class _CreateEventState extends State<EditEvent> {
                 CustomTextFeild(
                   text: titleEvent,
                   onChanged: (text) {
-                    newTitle = text;
+                    newTitle.isEmpty || newTitle == null
+                        ? newTitle = titleEvent!
+                        : newTitle = text;
                   },
                   validator: (title) {
                     if (title == null || title.isEmpty) {
@@ -170,7 +170,9 @@ class _CreateEventState extends State<EditEvent> {
                 CustomTextFeild(
                   text: descEvent,
                   onChanged: (descr) {
-                    newDesc = descr;
+                    newDesc.isEmpty || newDesc == null
+                        ? newDesc = descEvent!
+                        : newDesc = descr;
                   },
                   validator: (desc) {
                     if (desc == null || desc.isEmpty) {
@@ -213,30 +215,30 @@ class _CreateEventState extends State<EditEvent> {
                   title: 'Update Event',
                   width: double.infinity,
                   onTap: () {
-                    // String finalDate =
-                    //     '${selectDate?.day}/${selectDate?.month}/${selectDate?.year}';
+                    
                     try {
                       FirebaseUtils.getEventCollection().doc(args.id).update({
-                        'image': newImage == null || newImage.isEmpty
-                            ? currentImage
-                            : newImage,
+                        'image': newImage.isEmpty ? currentImage : newImage,
                         'nameEvent':
-                            newEventName == null ? currentName : newEventName,
-                        'tilte': newTitle == null ? titleEvent : newTitle,
-                        'description': newDesc == null ? descEvent : newDesc,
-                        // 'isFavorite': isFavorite,
+                            newEventName.isEmpty ? currentName : newEventName,
+                        'tilte': newTitle.isEmpty ? titleEvent : newTitle,
+                        'description': newDesc.isEmpty ? descEvent : newDesc,
                         // 'date': selectDate == null? S.of(context).ChooseDate: '${selectDate!.day}/${selectDate!.month}/${selectDate!.year}',
-                        // 'time': selectTime == null ? args.time! : formatTime,
+                        'time': selectTime == null ? args.time! : formatTime,
                       });
 
                       print(
-                          '${newImage.isEmpty ? currentImage : newImage}\n${newEventName == null ? currentName : newEventName}\n${newTitle == null ? titleEvent : newTitle}\n${newDesc == null ? descEvent : newDesc}\n${selectDate == null ? formattedDate : selectDate}\n${formatTime == null ? args.time : formatTime}');
+                          '=====================The Image is ${newImage} ==========================');
+                      print(
+                          '=====================The eventName is ${newEventName} ==========================');
+                      print(
+                          '=====================The Favorit is ${args.isFavorite} ==========================');
                       dataProvider.getDatafromFirestore();
-                      
+                      setState(() {});
+                      Navigator.pushReplacementNamed(context, DefultPage.id);
                     } catch (e) {
                       print('The error is $e');
                     }
-                    Navigator.pushReplacementNamed(context, DefultPage.id);
                   },
                 )
               ],
@@ -267,7 +269,3 @@ class _CreateEventState extends State<EditEvent> {
     setState(() {});
   }
 }
-/**
- * currentName = eventsNameList[index];
-                            currentImage = eventsNameAndImag[currentName];
- */

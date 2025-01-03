@@ -73,7 +73,7 @@ class _DefultPageState extends State<DefultPage> {
               ),
               buildIconBottomBar(
                   icon: selectIndex == 2
-                      ? Icon(Icons.favorite_border_rounded)
+                      ? Icon(Icons.favorite)
                       : Icon(Icons.favorite_border_outlined),
                   index: 2,
                   label: S.of(context).loves),

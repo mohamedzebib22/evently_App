@@ -1,15 +1,28 @@
 import 'package:evently_app/models/colors_app.dart';
+import 'package:evently_app/providers/get_all_event.dart';
 import 'package:evently_app/widgets/card_event.dart';
 import 'package:evently_app/widgets/custom_text_feild.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class LovesPage extends StatelessWidget {
+class LovesPage extends StatefulWidget {
   const LovesPage({super.key});
   static String id = 'LovePage';
+
+  @override
+  State<LovesPage> createState() => _LovesPageState();
+}
+
+class _LovesPageState extends State<LovesPage> {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
+
+    var listProvider = Provider. of<GetAllEventProvider>(context);
+    if (listProvider.eventList.isEmpty) {
+      listProvider.getIsFavofiteDataFromFirestore();
+    }
     return Column(
       children: [
         SizedBox(
@@ -26,9 +39,9 @@ class LovesPage extends StatelessWidget {
         ),
         Expanded(
           child: ListView.builder(
-            itemCount: 20,
+            itemCount: listProvider.eventList.length,
             itemBuilder: (context, index) {
-            return Container();
+            return CardEvent(event: listProvider.eventList[index]);
           }),
         )
       ],

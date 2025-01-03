@@ -1,18 +1,36 @@
 import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/models/event.dart';
+import 'package:evently_app/providers/get_all_event.dart';
+import 'package:evently_app/utils/firebase_utils.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:jiffy/jiffy.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
-class CardEvent extends StatelessWidget {
+class CardEvent extends StatefulWidget {
   CardEvent({super.key, required this.event});
   Event event;
+
+  @override
+  State<CardEvent> createState() => _CardEventState();
+}
+
+class _CardEventState extends State<CardEvent> {
+  late bool isSelect;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    isSelect = widget.event.isFavorite ?? false;
+  }
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-    
-    DateTime date = event.date;
+    var listProvider = Provider.of<GetAllEventProvider>(context);
+    DateTime date = widget.event.date;
     String formattedDate = DateFormat('MMM').format(date);
 
     return Container(
@@ -23,8 +41,7 @@ class CardEvent extends StatelessWidget {
           border: Border.all(width: 3, color: ColorsApp.kPrimaryColor),
           borderRadius: BorderRadius.circular(16),
           image: DecorationImage(
-              image: AssetImage(event.image!),
-              fit: BoxFit.fill)),
+              image: AssetImage(widget.event.image!), fit: BoxFit.fill)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -38,7 +55,7 @@ class CardEvent extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Text('${event.date.day}',
+                Text('${widget.event.date.day}',
                     style: TextStyle(
                         color: ColorsApp.kPrimaryColor,
                         fontWeight: FontWeight.bold,
@@ -63,14 +80,26 @@ class CardEvent extends StatelessWidget {
               children: [
                 SingleChildScrollView(
                     child: Text(
-                  '${event.tilte}',
+                  '${widget.event.tilte}',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 )),
                 Spacer(),
-                Icon(
-                  Icons.favorite_border_outlined,
-                  color: Colors.amber,
-                ),
+                IconButton(
+                    onPressed: () {
+                      isSelect = !isSelect;
+                      FirebaseUtils.getEventCollection()
+                          .doc(widget.event.id)
+                          .update({'isFavorite': isSelect});
+                      listProvider.getDatafromFirestore();
+                      
+                      setState(() {});
+                    },
+                    icon: Icon(
+                      isSelect == true
+                          ? Icons.favorite
+                          : Icons.favorite_border_outlined,
+                      color: ColorsApp.kPrimaryColor,
+                    )),
               ],
             ),
           ),
