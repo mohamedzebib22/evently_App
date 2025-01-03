@@ -6,6 +6,7 @@ import 'package:evently_app/providers/app_theme.dart';
 import 'package:evently_app/providers/get_all_event.dart';
 import 'package:evently_app/screens/create_event.dart';
 import 'package:evently_app/screens/defult_page.dart';
+import 'package:evently_app/screens/edit_event.dart';
 import 'package:evently_app/screens/forget_password_page.dart';
 import 'package:evently_app/screens/get_desc_event.dart';
 import 'package:evently_app/screens/intro_page.dart';
@@ -72,6 +73,7 @@ class _EventelyAppState extends State<EventelyApp> {
         IntroPage.id: (context) => IntroPage(),
         Onboardinscreen.id: (context) => Onboardinscreen(),
         GetDescEvent.id : (context) => GetDescEvent(),
+        EditEvent.id : (context) =>EditEvent()
       },
 
       // initialRoute: ProfilePage.id,

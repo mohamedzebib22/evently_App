@@ -8,6 +8,7 @@ class CustomTextFeild extends StatelessWidget {
       {super.key,
       required this.hintText,
       this.prefix,
+      this.text,
       this.sufix,
       this.textStyle,
       this.borderColor = Colors.blue,
@@ -17,6 +18,7 @@ class CustomTextFeild extends StatelessWidget {
 
   MyValidator? validator;
   String hintText;
+  String? text;
   Widget? prefix;
   Widget? sufix;
   TextStyle? textStyle;
@@ -26,6 +28,7 @@ class CustomTextFeild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: text,
       onChanged: onChanged,
       validator: validator,
       maxLines: maxLines,
@@ -42,6 +45,7 @@ class CustomTextFeild extends StatelessWidget {
             makeAllBorder(color: ColorsApp.kPrimaryColor, radius: 16),
         errorBorder: makeAllBorder(color: Colors.red, radius: 16),
       ),
+      
     );
   }
 

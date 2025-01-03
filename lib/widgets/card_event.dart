@@ -23,7 +23,7 @@ class CardEvent extends StatelessWidget {
           border: Border.all(width: 3, color: ColorsApp.kPrimaryColor),
           borderRadius: BorderRadius.circular(16),
           image: DecorationImage(
-              image: AssetImage('assets/images/bookclub.png'),
+              image: AssetImage(event.image!),
               fit: BoxFit.fill)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
