@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class Event {
@@ -29,6 +30,7 @@ class Event {
     description: data['description'],
     isFavorite:data['isFavorite'] ,
     date:DateTime.fromMillisecondsSinceEpoch(data['date']),
+    //(data['date'] as Timestamp).toDate(),
     time: data['time'],
     
   );
@@ -43,6 +45,7 @@ class Event {
       'description': description,
       'isFavorite': isFavorite,
       'date': date.millisecondsSinceEpoch,
+            // Timestamp.fromDate(date),
       'time': time
     };
   }

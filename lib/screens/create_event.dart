@@ -6,9 +6,11 @@ import 'package:evently_app/models/event.dart';
 import 'package:evently_app/providers/get_all_event.dart';
 import 'package:evently_app/utils/firebase_utils.dart';
 import 'package:evently_app/widgets/custom_button.dart';
+import 'package:evently_app/widgets/showloading.dart';
 import 'package:evently_app/widgets/custom_text_feild.dart';
 import 'package:evently_app/widgets/location_widget.dart';
 import 'package:evently_app/widgets/tap_widget.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -192,7 +194,9 @@ class _CreateEventState extends State<CreateEvent> {
 
   void addEvent() {
     if (formkey.currentState?.validate() == true) {
+      ShowLoading.showLoading(context: context, msg: 'Please Wait For Added Event');
       Event event = Event(
+         
           image: currentImage,
           nameEvent: currentName,
           tilte: titleEvent,
@@ -201,10 +205,12 @@ class _CreateEventState extends State<CreateEvent> {
           time: formatTime);
       FirebaseUtils.addEvent(event).timeout(Duration(milliseconds: 500),
           onTimeout: () {
+         
         print(
             '${event.image}\n${event.nameEvent}\n${event.tilte}\n${event.description}\n${event.date}\n${event.time}\n${event.id}');
         print('Event add sucssefuly');
         ListProvider.getDatafromFirestore();
+        ShowLoading.hideLoading(context: context);
         Navigator.pop(context);
       });
       

@@ -17,7 +17,7 @@ class CustomText extends StatelessWidget {
             title,
             style: TextStyle(
                 color: ColorsApp.kPrimaryColor,
-                fontSize: 18,
+                fontSize: 14,
                 fontWeight: FontWeight.bold,
                 decoration: TextDecoration.underline,
                 decorationColor: ColorsApp.kPrimaryColor,

@@ -87,7 +87,7 @@ class _CreateEventState extends State<EditEvent> {
         toolbarHeight: height * .03,
         centerTitle: true,
         title: Text(
-          'Create Event',
+          'Edit Event',
           style: TextStyle(
               color: ColorsApp.kPrimaryColor,
               fontSize: 18,
@@ -223,7 +223,7 @@ class _CreateEventState extends State<EditEvent> {
                             newEventName.isEmpty ? currentName : newEventName,
                         'tilte': newTitle.isEmpty ? titleEvent : newTitle,
                         'description': newDesc.isEmpty ? descEvent : newDesc,
-                        // 'date': selectDate == null? S.of(context).ChooseDate: '${selectDate!.day}/${selectDate!.month}/${selectDate!.year}',
+                        //'date': selectDate == null? formattedDate : '${selectDate!.day}/${selectDate!.month}/${selectDate!.year}',
                         'time': selectTime == null ? args.time! : formatTime,
                       });
 

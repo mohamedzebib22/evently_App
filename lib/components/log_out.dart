@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class LogOut extends StatelessWidget {
-  const LogOut({super.key});
-
+   LogOut({super.key , required this.onTap});
+  VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     var languageProvider = Provider.of<AppLanguageProvider>(context);
@@ -17,10 +17,7 @@ class LogOut extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-              onPressed: () {
-                
-                
-              },
+              onPressed: onTap,
               icon: Icon(
                 Icons.logout_sharp,
                 color: Colors.white,

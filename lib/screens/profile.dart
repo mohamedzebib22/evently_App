@@ -8,7 +8,11 @@ import 'package:evently_app/generated/l10n.dart';
 
 import 'package:evently_app/providers/app_language.dart';
 import 'package:evently_app/providers/app_theme.dart';
+import 'package:evently_app/screens/login_page.dart';
+import 'package:evently_app/widgets/showloading.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -49,7 +53,16 @@ class _ProfilePageState extends State<ProfilePage> {
                           : S.of(context).Dark,
                       onTap: bottomSheetTheme),
                   Spacer(),
-                  LogOut(),
+                  LogOut(
+                    onTap: () async {
+                    
+                      GoogleSignIn googleSignIn = GoogleSignIn();
+                      googleSignIn.disconnect();
+                      await FirebaseAuth.instance.signOut();
+                      
+                      Navigator.pushReplacementNamed(context, LoginPage.id);
+                    },
+                  ),
                   SizedBox(
                     height: 20,
                   ),

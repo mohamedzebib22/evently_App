@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "ALl": MessageLookupByLibrary.simpleMessage("الكل"),
         "AddEvent": MessageLookupByLibrary.simpleMessage("انشاء حذث"),
+        "AlreadyHaveAccount":
+            MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل"),
         "Arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "Birthday": MessageLookupByLibrary.simpleMessage("عيد ميلاد"),
         "BookClub": MessageLookupByLibrary.simpleMessage("نادى"),
@@ -33,8 +35,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "ChooseTime": MessageLookupByLibrary.simpleMessage("الوقت"),
         "ConnectwithFriendsShareMoments": MessageLookupByLibrary.simpleMessage(
             "تواصل مع الأصدقاء وشارك اللحظات"),
+        "CreateAccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "Dark": MessageLookupByLibrary.simpleMessage("ليلى"),
         "Description": MessageLookupByLibrary.simpleMessage("الوصف"),
+        "DontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("هل لا تملك حساب"),
         "Eating": MessageLookupByLibrary.simpleMessage("الاكل"),
         "EffortlessEventPlanning":
             MessageLookupByLibrary.simpleMessage("تخطيط الأحداث دون عناء"),
@@ -45,17 +50,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "Exhibtion": MessageLookupByLibrary.simpleMessage("سياحة"),
         "FindEventsThatInspireYou":
             MessageLookupByLibrary.simpleMessage("ابحث عن الأحداث التي تلهمك"),
-        "ForgetPassword": MessageLookupByLibrary.simpleMessage("نسيت الباسورد"),
+        "ForgetPassword":
+            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر"),
         "Gaming": MessageLookupByLibrary.simpleMessage("العاب"),
         "Holiday": MessageLookupByLibrary.simpleMessage("اجازة"),
         "Home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "Language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "LetsStart": MessageLookupByLibrary.simpleMessage("ابدا"),
         "Light": MessageLookupByLibrary.simpleMessage("نهارى"),
+        "Login": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "LoginWithGoogle":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول باستخدام جوجل"),
         "Logout": MessageLookupByLibrary.simpleMessage("خروج"),
         "Lovs": MessageLookupByLibrary.simpleMessage("المفضلة"),
         "Maps": MessageLookupByLibrary.simpleMessage("الموقع"),
         "Metting": MessageLookupByLibrary.simpleMessage("اجتماع"),
+        "NoEvent": MessageLookupByLibrary.simpleMessage("لايوجد احداث..."),
         "Profile": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "Register": MessageLookupByLibrary.simpleMessage("تسجيل حساب"),
         "SubTitle": MessageLookupByLibrary.simpleMessage("قم بتخصيص تجربتك"),

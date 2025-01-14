@@ -45,7 +45,14 @@
     "intropage1Body" :"Dive into a world of events crafted to fit your unique interests. \nWhether you're into live music, art workshops, professional networking, or simply discovering new experiences, \nwe have something for everyone. \nOur curated recommendations will help you explore, connect, and make the most of every opportunity around you.",
     "intoPage2Body":"Take the hassle out of organizing events with our all-in-one planning tools. \nFrom setting up invites and managing RSVPs to scheduling reminders and coordinating details, \nwe’ve got you covered. \nPlan with ease and focus on what matters – creating an unforgettable experience for you and your guests.",
     "introPage3Body" : "Make every event memorable by sharing the experience with others. \nOur platform lets you invite friends, keep everyone in the loop, and celebrate moments together. \nCapture and share the excitement with your network, \nso you can relive the highlights and cherish the memories.",
-    "EventDetails":"Event Details"
+    "EventDetails":"Event Details",
+    "Login" : "Login",
+    "DontHaveAccount":"Don’t Have Account ?",
+    "CreateAccount" : "Create Account",
+    "LoginWithGoogle" : "Login With Google",
+    "AlreadyHaveAccount" : "Already Have Account ?",
+    "NoEvent":"No Event Added..."
+  
     
               
 }

@@ -4,6 +4,7 @@ import 'package:evently_app/models/theme_data.dart';
 import 'package:evently_app/providers/app_language.dart';
 import 'package:evently_app/providers/app_theme.dart';
 import 'package:evently_app/providers/get_all_event.dart';
+import 'package:evently_app/providers/get_user_name.dart';
 import 'package:evently_app/screens/create_event.dart';
 import 'package:evently_app/screens/defult_page.dart';
 import 'package:evently_app/screens/edit_event.dart';
@@ -29,11 +30,13 @@ void main() async {
     projectId: 'eventapp-9dff0',
     storageBucket: 'eventapp-9dff0.firebasestorage.app',
   ));
-  await FirebaseFirestore.instance.disableNetwork();
+  //await FirebaseFirestore.instance.disableNetwork();
   runApp(MultiProvider(providers: [
+    
     ChangeNotifierProvider(create: (context) => AppLanguageProvider()),
     ChangeNotifierProvider(create: (context) => AppThemeProvider()),
     ChangeNotifierProvider(create: (context) => GetAllEventProvider()),
+    ChangeNotifierProvider(create: (context) => changeUserName()),
   ], child: const EventelyApp()));
 }
 
@@ -90,7 +93,8 @@ class _EventelyAppState extends State<EventelyApp> {
       ],
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
-      home:DefultPage(),
+      home:LoginPage(),
+      //FirebaseAuth.instance.currentUser == null ? LoginPage() : DefultPage(),
     );
   }
 }

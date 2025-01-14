@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "ALl": MessageLookupByLibrary.simpleMessage("ALl"),
         "AddEvent": MessageLookupByLibrary.simpleMessage("Add Event"),
+        "AlreadyHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Already Have Account ?"),
         "Arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "Birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
         "BookClub": MessageLookupByLibrary.simpleMessage("Book Club"),
@@ -33,8 +35,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "ChooseTime": MessageLookupByLibrary.simpleMessage("Choose Time"),
         "ConnectwithFriendsShareMoments": MessageLookupByLibrary.simpleMessage(
             "Connect with Friends & Share Moments"),
+        "CreateAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
         "Dark": MessageLookupByLibrary.simpleMessage("Dark"),
         "Description": MessageLookupByLibrary.simpleMessage("Description"),
+        "DontHaveAccount":
+            MessageLookupByLibrary.simpleMessage("Don’t Have Account ?"),
         "Eating": MessageLookupByLibrary.simpleMessage("Eating"),
         "EffortlessEventPlanning":
             MessageLookupByLibrary.simpleMessage("Effortless Event Planning"),
@@ -53,10 +58,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "Language": MessageLookupByLibrary.simpleMessage("language"),
         "LetsStart": MessageLookupByLibrary.simpleMessage("Let’s Start"),
         "Light": MessageLookupByLibrary.simpleMessage("Light"),
+        "Login": MessageLookupByLibrary.simpleMessage("Login"),
+        "LoginWithGoogle":
+            MessageLookupByLibrary.simpleMessage("Login With Google"),
         "Logout": MessageLookupByLibrary.simpleMessage("LogOut"),
         "Lovs": MessageLookupByLibrary.simpleMessage("Lovs"),
         "Maps": MessageLookupByLibrary.simpleMessage("Maps"),
         "Metting": MessageLookupByLibrary.simpleMessage("Metting"),
+        "NoEvent": MessageLookupByLibrary.simpleMessage("No Event Added..."),
         "Profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "Register": MessageLookupByLibrary.simpleMessage("Register"),
         "SubTitle":

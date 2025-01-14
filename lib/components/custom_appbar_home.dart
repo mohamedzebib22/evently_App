@@ -1,6 +1,7 @@
 import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/colors_app.dart';
 import 'package:evently_app/providers/get_all_event.dart';
+import 'package:evently_app/providers/get_user_name.dart';
 import 'package:evently_app/widgets/tap_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,6 +16,7 @@ class CustomAppbarHome extends StatefulWidget {
 class _CustomAppbarHomeState extends State<CustomAppbarHome> {
   @override
   Widget build(BuildContext context) {
+    var userNameProvider = Provider.of<changeUserName>(context);
     var listProvider = Provider.of<GetAllEventProvider>(context);
     List<String> eventsNameList = [
       S.of(context).ALl,
@@ -48,7 +50,7 @@ class _CustomAppbarHomeState extends State<CustomAppbarHome> {
                       S.of(context).Welcomeback,
                       style: TextStyle(color: Colors.white, fontSize: 14),
                     ),
-                    Text('John Safwat',
+                    Text(userNameProvider.currentUser!.name,
                         style: TextStyle(color: Colors.white, fontSize: 24))
                   ],
                 ),

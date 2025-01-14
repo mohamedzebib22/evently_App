@@ -8,6 +8,7 @@ import 'package:evently_app/screens/edit_event.dart';
 import 'package:evently_app/utils/firebase_utils.dart';
 import 'package:evently_app/widgets/custom_button.dart';
 import 'package:evently_app/widgets/custom_details.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -41,7 +42,7 @@ class _GetDescEventState extends State<GetDescEvent> {
         centerTitle: true,
         title: Row(
           children: [
-           const Spacer(),
+            const Spacer(),
             Text(
               S.of(context).EventDetails,
               style: TextStyle(
@@ -49,19 +50,22 @@ class _GetDescEventState extends State<GetDescEvent> {
                   fontSize: 18,
                   fontWeight: FontWeight.bold),
             ),
-           const Spacer(),
+            const Spacer(),
             IconButton(
                 onPressed: () {
                   Navigator.pushNamed(context, EditEvent.id, arguments: args);
                 },
-                icon:const Icon(Icons.edit)),
+                icon: const Icon(Icons.edit)),
             IconButton(
                 onPressed: () {
-                  FirebaseUtils.getEventCollection().doc(args.id).delete();
+                  FirebaseUtils.getEventCollection()
+                      .doc(args.id)
+                      .delete();
+                  print('Delete Sucssefuly');
                   dataProvider.getDatafromFirestore();
                   Navigator.pushReplacementNamed(context, DefultPage.id);
                 },
-                icon:const Icon(
+                icon: const Icon(
                   Icons.delete_forever,
                   color: Colors.red,
                 )),
@@ -84,11 +88,9 @@ class _GetDescEventState extends State<GetDescEvent> {
               args.tilte!,
               style: TextStyle(color: ColorsApp.kPrimaryColor, fontSize: 22),
             ),
-            CustomDetails(
-              date: formattedDate,
-              time:args.time!
-              //args.time!,
-            ),
+            CustomDetails(date: formattedDate, time: args.time!
+                //args.time!,
+                ),
             Text(
               S.of(context).Description,
               style: TextStyle(
@@ -113,4 +115,3 @@ class _GetDescEventState extends State<GetDescEvent> {
     );
   }
 }
-

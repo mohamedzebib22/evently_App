@@ -1,7 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:evently_app/components/custom_appbar_home.dart';
+import 'package:evently_app/generated/l10n.dart';
 import 'package:evently_app/models/event.dart';
+import 'package:evently_app/providers/app_theme.dart';
 import 'package:evently_app/providers/get_all_event.dart';
+import 'package:evently_app/providers/get_user_name.dart';
 import 'package:evently_app/screens/get_desc_event.dart';
 import 'package:evently_app/utils/firebase_utils.dart';
 import 'package:evently_app/widgets/card_event.dart';
@@ -18,10 +21,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  
   @override
   Widget build(BuildContext context) {
-   var listProvider = Provider. of<GetAllEventProvider>(context);
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+    var themeProvider=Provider.of<AppThemeProvider>(context);
+    var listProvider = Provider.of<GetAllEventProvider>(context);
     if (listProvider.eventList.isEmpty) {
       listProvider.getDatafromFirestore();
     }
@@ -33,19 +38,27 @@ class _HomeState extends State<Home> {
             child: CustomAppbarHome(),
           ),
           Expanded(
-            child: ListView.builder(
-                padding: EdgeInsets.zero,
-                itemCount: listProvider.eventList.length,
-                itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: (){
-                      Navigator.pushNamed(context, GetDescEvent.id,arguments: listProvider.eventList[index]);
-                    },
-                    child: CardEvent(
-                      event: listProvider.eventList[index],
-                    ),
-                  );
-                }),
+            child: listProvider.filterEventList.isEmpty
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(S.of(context).NoEvent,style: TextStyle(color:themeProvider.appTheme == ThemeMode.light ?Colors.black :Colors.white  ),),
+                    ],
+                  )
+                : ListView.builder(
+                    padding: EdgeInsets.zero,
+                    itemCount: listProvider.filterEventList.length,
+                    itemBuilder: (context, index) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, GetDescEvent.id,
+                              arguments: listProvider.eventList[index]);
+                        },
+                        child: CardEvent(
+                          event: listProvider.filterEventList[index],
+                        ),
+                      );
+                    }),
           )
         ],
       ),

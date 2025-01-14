@@ -56,22 +56,51 @@ class _OnboardinscreenState extends State<Onboardinscreen> {
           style: TextStyle(color: Colors.black, fontSize: 20),
         ),
         onDone: () {
-          Navigator.pushNamed(context, LoginPage.id);
+          Navigator.pushNamedAndRemoveUntil(
+              context, LoginPage.id, (route) => false);
+          //Navigator.pushNamed(context, LoginPage.id);
         },
         pages: [
           PageViewModel(
-            titleWidget:AlignmentTextAndBodyIntro(text: S.of(context).FindEventsThatInspireYou , itemColor: ColorsApp.kPrimaryColor, itemSize: 18,),
-            bodyWidget: AlignmentTextAndBodyIntro(text: S.of(context).intropage1Body, itemColor: themeProvider.appTheme == ThemeMode.light ? Colors.black : Colors.white, itemSize: 16),
+            titleWidget: AlignmentTextAndBodyIntro(
+              text: S.of(context).FindEventsThatInspireYou,
+              itemColor: ColorsApp.kPrimaryColor,
+              itemSize: 18,
+            ),
+            bodyWidget: AlignmentTextAndBodyIntro(
+                text: S.of(context).intropage1Body,
+                itemColor: themeProvider.appTheme == ThemeMode.light
+                    ? Colors.black
+                    : Colors.white,
+                itemSize: 16),
             image: Image.asset('assets/images/intropage1.png'),
           ),
           PageViewModel(
-            titleWidget:AlignmentTextAndBodyIntro(text: S.of(context).EffortlessEventPlanning, itemColor: ColorsApp.kPrimaryColor, itemSize: 18,),
-            bodyWidget: AlignmentTextAndBodyIntro(text: S.of(context).intoPage2Body, itemColor: themeProvider.appTheme == ThemeMode.light ? Colors.black : Colors.white, itemSize: 16),
+            titleWidget: AlignmentTextAndBodyIntro(
+              text: S.of(context).EffortlessEventPlanning,
+              itemColor: ColorsApp.kPrimaryColor,
+              itemSize: 18,
+            ),
+            bodyWidget: AlignmentTextAndBodyIntro(
+                text: S.of(context).intoPage2Body,
+                itemColor: themeProvider.appTheme == ThemeMode.light
+                    ? Colors.black
+                    : Colors.white,
+                itemSize: 16),
             image: Image.asset('assets/images/introscreen2.png'),
           ),
           PageViewModel(
-            titleWidget:AlignmentTextAndBodyIntro(text: S.of(context).ConnectwithFriendsShareMoments, itemColor: ColorsApp.kPrimaryColor, itemSize: 18,),
-            bodyWidget: AlignmentTextAndBodyIntro(text: S.of(context).introPage3Body, itemColor: themeProvider.appTheme == ThemeMode.light ? Colors.black : Colors.white, itemSize: 16),
+            titleWidget: AlignmentTextAndBodyIntro(
+              text: S.of(context).ConnectwithFriendsShareMoments,
+              itemColor: ColorsApp.kPrimaryColor,
+              itemSize: 18,
+            ),
+            bodyWidget: AlignmentTextAndBodyIntro(
+                text: S.of(context).introPage3Body,
+                itemColor: themeProvider.appTheme == ThemeMode.light
+                    ? Colors.black
+                    : Colors.white,
+                itemSize: 16),
             image: Image.asset('assets/images/introscreen3.png'),
           )
         ],
@@ -79,4 +108,3 @@ class _OnboardinscreenState extends State<Onboardinscreen> {
     );
   }
 }
-

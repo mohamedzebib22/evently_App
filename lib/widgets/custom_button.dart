@@ -33,20 +33,24 @@ class CustomButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                title,
-                style: TextStyle(color: textColor, fontSize: 20),
-              ),
+              Spacer(flex: 3,),
               Container(
                 width: width * 0.06,
                 height: height * 0.03,
                 child: icon,
-              )
+              ),
+              Text(
+                title,
+                style: TextStyle(color: textColor, fontSize: 20),
+              ),
+              Spacer(flex: 4,),
+              
             ],
           )),
     );
   }
 }
+
 /**
  * Center(
             child: Text(

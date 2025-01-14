@@ -519,6 +519,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Login`
+  String get Login {
+    return Intl.message(
+      'Login',
+      name: 'Login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t Have Account ?`
+  String get DontHaveAccount {
+    return Intl.message(
+      'Don’t Have Account ?',
+      name: 'DontHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Account`
+  String get CreateAccount {
+    return Intl.message(
+      'Create Account',
+      name: 'CreateAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login With Google`
+  String get LoginWithGoogle {
+    return Intl.message(
+      'Login With Google',
+      name: 'LoginWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already Have Account ?`
+  String get AlreadyHaveAccount {
+    return Intl.message(
+      'Already Have Account ?',
+      name: 'AlreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Event Added...`
+  String get NoEvent {
+    return Intl.message(
+      'No Event Added...',
+      name: 'NoEvent',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

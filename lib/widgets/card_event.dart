@@ -8,29 +8,27 @@ import 'package:jiffy/jiffy.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-class CardEvent extends StatefulWidget {
+class CardEvent extends StatelessWidget {
   CardEvent({super.key, required this.event});
   Event event;
 
-  @override
-  State<CardEvent> createState() => _CardEventState();
-}
+ 
 
-class _CardEventState extends State<CardEvent> {
-  late bool isSelect;
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    isSelect = widget.event.isFavorite ?? false;
-  }
+
+  // late bool isSelect;
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   isSelect = widget.event.isFavorite ?? false;
+  // }
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     var listProvider = Provider.of<GetAllEventProvider>(context);
-    DateTime date = widget.event.date;
+    DateTime date = event.date;
     String formattedDate = DateFormat('MMM').format(date);
 
     return Container(
@@ -41,7 +39,7 @@ class _CardEventState extends State<CardEvent> {
           border: Border.all(width: 3, color: ColorsApp.kPrimaryColor),
           borderRadius: BorderRadius.circular(16),
           image: DecorationImage(
-              image: AssetImage(widget.event.image!), fit: BoxFit.fill)),
+              image: AssetImage(event.image!), fit: BoxFit.fill)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -55,7 +53,7 @@ class _CardEventState extends State<CardEvent> {
             ),
             child: Column(
               children: [
-                Text('${widget.event.date.day}',
+                Text('${event.date.day}',
                     style: TextStyle(
                         color: ColorsApp.kPrimaryColor,
                         fontWeight: FontWeight.bold,
@@ -80,22 +78,23 @@ class _CardEventState extends State<CardEvent> {
               children: [
                 SingleChildScrollView(
                     child: Text(
-                  '${widget.event.tilte}',
+                  '${event.tilte}',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                 )),
                 Spacer(),
                 IconButton(
                     onPressed: () {
-                      isSelect = !isSelect;
-                      FirebaseUtils.getEventCollection()
-                          .doc(widget.event.id)
-                          .update({'isFavorite': isSelect});
-                      listProvider.getDatafromFirestore();
-                      
-                      setState(() {});
+                      listProvider.updateFavorite(event);
+                      // isSelect = !isSelect;
+                      // FirebaseUtils.getEventCollection()
+                      //     .doc(widget.event.id)
+                      //     .update({'isFavorite': isSelect});
+                      // listProvider.getDatafromFirestore();
+
+                      // setState(() {});
                     },
                     icon: Icon(
-                      isSelect == true
+                      event.isFavorite == true
                           ? Icons.favorite
                           : Icons.favorite_border_outlined,
                       color: ColorsApp.kPrimaryColor,

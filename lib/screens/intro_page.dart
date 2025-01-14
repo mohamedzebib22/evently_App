@@ -7,6 +7,7 @@ import 'package:evently_app/screens/defult_page.dart';
 import 'package:evently_app/screens/login_page.dart';
 import 'package:evently_app/screens/onboardinscreen.dart';
 import 'package:evently_app/widgets/custom_button.dart';
+import 'package:evently_app/widgets/showloading.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -54,7 +55,7 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
                   fontWeight: FontWeight.bold),
             ),
             Text(
-             S.of(context).bodyIntro,
+              S.of(context).bodyIntro,
               style: TextStyle(
                   color: themeProvider.appTheme == ThemeMode.light
                       ? Colors.black
@@ -96,7 +97,8 @@ class _IntroPageState extends State<IntroPage> with TickerProviderStateMixin {
               title: S.of(context).LetsStart,
               width: double.infinity,
               onTap: () {
-                Navigator.pushNamed(context, Onboardinscreen.id);
+                
+                Navigator.pushReplacementNamed(context, Onboardinscreen.id);
               },
             )
           ],

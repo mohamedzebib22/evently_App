@@ -44,6 +44,7 @@ dependencies:
   firebase_auth: ^5.3.4
   google_sign_in: ^6.2.2
   jiffy: ^6.3.2
+  quickalert: ^1.1.0
   flutter_localizations:
         sdk: flutter
 
